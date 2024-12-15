@@ -1,5 +1,5 @@
 {
-  "domain": "my_fuel_portal",
+  "domain": "ha_my_fuel_portal",
   "name": "MyFuelPortal",
   "codeowners": [
     "@jterrace"
