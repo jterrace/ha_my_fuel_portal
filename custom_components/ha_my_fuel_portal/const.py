@@ -1,8 +1,8 @@
-"""Constants for integration_blueprint."""
+"""Constants for ha_my_fuel_portal."""
 
 from logging import Logger, getLogger
 
 LOGGER: Logger = getLogger(__package__)
 
-DOMAIN = "integration_blueprint"
+DOMAIN = "ha_my_fuel_portal"
 ATTRIBUTION = "Data provided by http://jsonplaceholder.typicode.com/"

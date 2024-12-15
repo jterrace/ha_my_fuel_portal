@@ -1,4 +1,4 @@
-"""Custom types for integration_blueprint."""
+"""Custom types for MyFuelPortal."""
 
 from __future__ import annotations
 
@@ -9,17 +9,17 @@ if TYPE_CHECKING:
     from homeassistant.config_entries import ConfigEntry
     from homeassistant.loader import Integration
 
-    from .api import IntegrationBlueprintApiClient
-    from .coordinator import BlueprintDataUpdateCoordinator
+    from .api import MyFuelPortalApiClient
+    from .coordinator import MyFuelPortalDataUpdateCoordinator
 
 
-type IntegrationBlueprintConfigEntry = ConfigEntry[IntegrationBlueprintData]
+type MyFuelPortalConfigEntry = ConfigEntry[MyFuelPortalData]
 
 
 @dataclass
-class IntegrationBlueprintData:
-    """Data for the Blueprint integration."""
+class MyFuelPortalData:
+    """Data for the MyFuelPortal integration."""
 
-    client: IntegrationBlueprintApiClient
-    coordinator: BlueprintDataUpdateCoordinator
+    client: MyFuelPortalApiClient
+    coordinator: MyFuelPortalDataUpdateCoordinator
     integration: Integration
