@@ -7,6 +7,7 @@ from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from homeassistant.config_entries import ConfigEntry
+    from homeassistant.helpers.storage import Store
     from homeassistant.loader import Integration
 
     from .api import MyFuelPortalApiClient
@@ -14,6 +15,7 @@ if TYPE_CHECKING:
 
 
 type MyFuelPortalConfigEntry = ConfigEntry[MyFuelPortalData]
+type MyFuelPortalCookieStorage = Store[dict]
 
 
 @dataclass
@@ -23,3 +25,4 @@ class MyFuelPortalData:
     client: MyFuelPortalApiClient
     coordinator: MyFuelPortalDataUpdateCoordinator
     integration: Integration
+    cookies: MyFuelPortalCookieStorage

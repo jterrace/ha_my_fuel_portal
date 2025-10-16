@@ -26,6 +26,38 @@ Copy contents of `custom_components/ha_my_fuel_portal/` to `custom_components/ha
 
 If you want to contribute to this please read the [Contribution guidelines](CONTRIBUTING.md)
 
+## Sensors
+
+ - Tank size (gallons)
+ - Fuel remaining (gallons)
+ - Fuel price (dollars)
+ - Fuel delivery mode (Monitored or Automated)
+ - Last delivery date
+ - Next delivery date (if fuel mode is automated)
+ - Last data read date (if fuel mode is monitored)
+
+## Development
+
+### Setup
+
+```
+$ virtualenv venv
+$ source ./venv/bin/activate
+$ ./scripts/setup
+```
+
+### Running Tests
+
+```
+$ ./venv/bin/pytest tests
+```
+
+### Running hass
+
+```
+$ ./venv/bin/develop
+```
+
 ***
 
 [ha_my_fuel_portal]: https://github.com/jterrace/ha_my_fuel_portal

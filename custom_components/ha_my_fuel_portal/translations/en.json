@@ -2,10 +2,11 @@
     "config": {
         "step": {
             "user": {
-                "description": "If you need help with the configuration have a look here: https://github.com/ludeeus/ha_my_fuel_portal",
+                "description": "If you need help with the configuration have a look here: https://github.com/jterrace/ha_my_fuel_portal",
                 "data": {
                     "username": "Username",
-                    "password": "Password"
+                    "password": "Password",
+                    "url": "URL for the tank page"
                 }
             }
         },

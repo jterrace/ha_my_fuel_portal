@@ -10,12 +10,12 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from homeassistant.const import CONF_PASSWORD, CONF_USERNAME, Platform
-from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.loader import async_get_loaded_integration
 
 from .api import MyFuelPortalApiClient
+from .const import DOMAIN
 from .coordinator import MyFuelPortalDataUpdateCoordinator
-from .data import MyFuelPortalData
+from .data import MyFuelPortalCookieStorage, MyFuelPortalData
 
 if TYPE_CHECKING:
     from homeassistant.core import HomeAssistant
@@ -42,10 +42,10 @@ async def async_setup_entry(
         client=MyFuelPortalApiClient(
             username=entry.data[CONF_USERNAME],
             password=entry.data[CONF_PASSWORD],
-            session=async_get_clientsession(hass),
         ),
         integration=async_get_loaded_integration(hass, entry.domain),
         coordinator=coordinator,
+        cookies=MyFuelPortalCookieStorage(hass, 1, f"{DOMAIN}/{entry.entry_id}.json"),
     )
 
     # https://developers.home-assistant.io/docs/integration_fetching_data#coordinated-single-api-poll-for-data-for-all-entities
