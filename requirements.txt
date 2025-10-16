@@ -1,5 +1,2 @@
-colorlog
 homeassistant
 mechanicalsoup
-pip
-ruff

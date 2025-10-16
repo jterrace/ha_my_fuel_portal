@@ -1,0 +1,7 @@
+pip
+ruff
+pytest
+pytest-asyncio
+pytest-cov
+coverage
+pytest-homeassistant-custom-component
